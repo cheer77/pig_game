@@ -71,7 +71,7 @@ bntHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       totalScores[activePlayer];
     //2. If total score of active player  is >= 100, active player is won, if not - switch active player
-    if (totalScores[activePlayer] >= 10) {
+    if (totalScores[activePlayer] >= 100) {
       isPlaying = false;
       document
         .querySelector(`.player--${activePlayer}`)
