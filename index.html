@@ -8,29 +8,47 @@
     <title>Свинья</title>
   </head>
   <body>
+    <div class="overlay hidden"></div>
     <main>
-      <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Игрок 1</h2>
-        <p class="score" id="score--0">47</p>
-        <div class="current">
-          <p class="current-label">Текущие очки</p>
-          <p class="current-score" id="current--0">0</p>
-        </div>
-      </section>
-      <section class="player player--1">
-        <h2 class="name" id="name--1">Игрок 2</h2>
-        <p class="score" id="score--1">31</p>
-        <div class="current">
-          <p class="current-label">Текущие очки</p>
-          <p class="current-score" id="current--1">0</p>
-        </div>
-      </section>
+      <button class="show-modal-window">Правила игры</button>
+      <div class="modal-window hidden">
+        <button class="close-modal-window">&times;</button>
+        <h1>Правила игры</h1>
+        <p>
+          Цель игры — бросая кость, набрать 100 очков. Ход представляет собой
+          серию бросков и заключается в следующем: игрок бросает кость
+          неограниченное число раз и суммирует выпадающие значения. Однако если
+          выпадает единица, вся сумма, набранная за ход, аннулируется и ход
+          переходит к следующему игроку. Игрок может завершить свой ход в любой
+          момент. Все игроки имеют право на одинаковое количество ходов.
+        </p>
+      </div>
 
-      <img src="img/dice1.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">🐷 Новая игра</button>
-      <button class="btn btn--roll">🎲 Бросить кубик</button>
-      <button class="btn btn--hold">👌 Оставить</button>
+      <div class="game--inner">
+        <section class="player player--0 player--active">
+          <h2 class="name" id="name--0">Игрок 1</h2>
+          <p class="score" id="score--0">47</p>
+          <div class="current">
+            <p class="current-label">Текущие очки</p>
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <h2 class="name" id="name--1">Игрок 2</h2>
+          <p class="score" id="score--1">31</p>
+          <div class="current">
+            <p class="current-label">Текущие очки</p>
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
+
+        <img src="img/dice1.png" alt="Playing dice" class="dice" />
+        <button class="btn btn--new">🐷 Новая игра</button>
+        <button class="btn btn--roll">🎲 Бросить кубик</button>
+        <button class="btn btn--hold">👌 Оставить</button>
+      </div>
     </main>
-    <script src="script.js"></script>
+    <script src="game-script.js"></script>
+    <script src="modal-script.js"></script>
   </body>
 </html>

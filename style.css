@@ -23,6 +23,10 @@ body {
 /* Layout */
 main {
   position: relative;
+}
+
+.game--inner {
+  position: relative;
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
@@ -165,4 +169,76 @@ main {
 
 .hidden {
   display: none;
+}
+
+.show-modal-window {
+  position: absolute;
+  top: -50px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  color: rgb(232, 125, 10);
+  border-radius: 10rem;
+  cursor: pointer;
+}
+.show-modal-window:active {
+  transform: translate(0%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.show-modal-window:focus {
+  outline: none;
+}
+
+.close-modal-window {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #444;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: #fff;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-window h1 {
+  margin-bottom: 30px;
+  font-size: 45px;
+}
+.modal-window p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }
