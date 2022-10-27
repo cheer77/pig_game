@@ -46,7 +46,7 @@ main {
 /* Elements */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -155,7 +155,7 @@ main {
 }
 
 .player--winner {
-  background-color: #2f2f2f;
+  background-image: linear-gradient(to top right, #7df981 0%, #8f8f8f 100%);
 }
 
 .player--winner .name {
